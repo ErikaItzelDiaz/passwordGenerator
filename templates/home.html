@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+		<title>Password Generator</title>
+		<link rel="icon" href="/static/logo.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/static/css/styles.css">
+	</head>
+	<body>
+	<header>
+		<p>Password Generator</p>
+	</header>
+		<section class="form">
+			<form action="/password/" method="POST">
+				<select class="form__select" name="length" id="length">
+	                <option value="6">6</option>
+	                <option value="7">7</option>
+	                <option value="8">8</option>
+	                <option value="9">9</option>
+	                <option value="10">10</option>
+	                <option value="11">11</option>
+	                <option value="12" selected="selected">12</option>
+	                <option value="13">13</option>
+	                <option value="14">14</option>
+				</select> Character Length
+				<div class="form__check">
+	                <input class="form__check-input" type="checkbox" id="uppercase" name="uppercase">
+	                <label class="form__check-label" for="uppercase">Uppercase</label>
+	            </div>
+	            <div class="form__check">
+	                <input class="form__check-input" type="checkbox" id="numbers" name="numbers">
+	                <label class="form__check-label" for="numbers">Numbers</label>
+	            </div>
+	            <div class="form__check">
+	                <input class="form__check-input" type="checkbox" id="special" name="special">
+	                <label class="form__check-label" for="special">Special Characters</label>
+	            </div>
+				<input class="form__submit" type="submit" value="Generate Password">
+			</form>
+		</section>
+		<footer>
+			<a class="home__btn" href="/about">About</a>
+		</footer>
+	</body>
+</html>
