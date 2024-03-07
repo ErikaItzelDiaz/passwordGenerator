@@ -7,40 +7,56 @@
 		<link rel="icon" href="/static/logo.ico" type="image/x-icon">
 		<link rel="stylesheet" href="/static/css/styles.css">
 	</head>
-	<body>
-	<header>
-		<p>Password Generator</p>
-	</header>
-		<section class="form">
-			<form action="/password/" method="POST">
-				<select class="form__select" name="length" id="length">
-	                <option value="6">6</option>
-	                <option value="7">7</option>
-	                <option value="8">8</option>
-	                <option value="9">9</option>
-	                <option value="10">10</option>
-	                <option value="11">11</option>
-	                <option value="12" selected="selected">12</option>
-	                <option value="13">13</option>
-	                <option value="14">14</option>
-				</select> Character Length
-				<div class="form__check">
-	                <input class="form__check-input" type="checkbox" id="uppercase" name="uppercase">
-	                <label class="form__check-label" for="uppercase">Uppercase</label>
-	            </div>
-	            <div class="form__check">
-	                <input class="form__check-input" type="checkbox" id="numbers" name="numbers">
-	                <label class="form__check-label" for="numbers">Numbers</label>
-	            </div>
-	            <div class="form__check">
-	                <input class="form__check-input" type="checkbox" id="special" name="special">
-	                <label class="form__check-label" for="special">Special Characters</label>
-	            </div>
-				<input class="form__submit" type="submit" value="Generate Password">
-			</form>
-		</section>
-		<footer>
-			<a class="home__btn" href="/about">About</a>
+	<body class="body">
+		<header class="navbar">
+			<h1 class="navbar__title">Random Password Generator</h1>
+			<h2 class="navbar__description">Create strong and secure passwords to keep your account safe online.</h2>
+		</header>
+		<main>
+			<div class="generator">
+				<img class="generator__logo" src="/static/lock.svg" alt="Password logo">
+				<section class="generator__form">
+					<form action="/" method="POST">
+						<div class="form__input">
+							<select class="form__select" name="length" id="length">
+				                <option value="6">6</option>
+				                <option value="7">7</option>
+				                <option value="8">8</option>
+				                <option value="9">9</option>
+				                <option value="10">10</option>
+				                <option value="11">11</option>
+				                <option value="12" selected="selected">12</option>
+				                <option value="13">13</option>
+				                <option value="14">14</option>
+							</select> Character Length
+							<div class="form__check">
+				                <input class="form__check-input" type="checkbox" id="uppercase" name="uppercase">
+				                <label class="form__check-label" for="uppercase">Uppercase</label>
+				            </div>
+				            <div class="form__check">
+				                <input class="form__check-input" type="checkbox" id="numbers" name="numbers">
+				                <label class="form__check-label" for="numbers">Numbers</label>
+				            </div>
+				            <div class="form__check">
+				                <input class="form__check-input" type="checkbox" id="special" name="special">
+				                <label class="form__check-label" for="special">Special Characters</label>
+				            </div>
+						</div>
+						<div class="form__submit">
+							<input class="submit" type="submit" value="Generate Password">
+						</div>
+					</form>
+				</section>
+			</div>
+			<section class="password">
+				<h2 class="password__content">{{ password }}</h2>
+			</section>
+		</main>
+		<footer class="footer">
+			<a class="footer__link" href="/about">About</a>
+			<a class="footer__link" href="https://erikadiaz.dev/">Profile</a>
+			<a class="footer__link" href="https://github.com/ErikaItzelDiaz/passwordGenerator">GitHub</a>
+			<a class="footer__link" href="https://www.linkedin.com/in/eerikaz/">LinkedIn</a>
 		</footer>
 	</body>
 </html>

@@ -7,11 +7,8 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
 
-    @app.route("/")
+    @app.route("/",methods=["GET","POST"])
     def home():
-        return render_template("home.html")
-    @app.route("/password/",methods=["GET","POST"])
-    def password():
         characters = list('abcdefghijklmnopqrstuvwxyz')
         if request.form.get("uppercase"):
             characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
@@ -19,11 +16,11 @@ def create_app():
             characters.extend(list('!@#$%&*'))
         if request.form.get("numbers"):
             characters.extend(list('1234567890'))
-        length = int(request.form.get("length"), 12)
+        length = int(request.form.get("length") or 12)
         password = ''
         for x in range(length):
             password += random.choice(characters)
-        return render_template("password.html",password=password)
+        return render_template("home.html",password=password)
 
     @app.route("/about/")
     def about():
