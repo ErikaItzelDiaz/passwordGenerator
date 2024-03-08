@@ -26,6 +26,9 @@ html{
     justify-content: space-evenly;
     padding-top: 5rem;
 }
+.generator__logo{
+    padding: 0 40px;
+}
 .form__input{
     padding: 25px;
 }

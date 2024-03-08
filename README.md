@@ -47,6 +47,9 @@ pip install flask
 
 7. Refresh the page to generate a new password with the same settings.
 
+## Attributions 
+Project inspired by [Nicholas Walter](https://www.udemy.com/user/nicholaswalter2/)
+
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please [open an issue](https://github.com/ErikaItzelDiaz/passwordGenerator/issues) or [create a pull request](https://github.com/ErikaItzelDiaz/passwordGenerator/pulls).
