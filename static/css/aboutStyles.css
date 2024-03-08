@@ -1,9 +1,10 @@
 :root{
     --seasalt: #f4f7f5;
-    --rose-quartz: #a7a2a9;
-    --hunyadi-yellow: #feb44d;
-    --sky-blue: #78d9f2;
-    --black: #070707;
+    --champagne-pink: #f5e4d7;
+    --misty-rose: #e5d1d0;
+    --silver: #bdbbb6;
+    --buff: #d3a588;
+    --paynes-gray: #546a76;
 }
 html{
     font-family: Lato, sans-serif;
@@ -25,11 +26,11 @@ html{
     flex-direction: column;
 }
 .content__title{
-    color: var(--rose-quartz);
+    color: var(--paynes-gray);
     margin-bottom: 0;
 }
 .content__text{
-    color: var(--black);
+    color: var(--silver);
     letter-spacing: 0.1rem;
 }
 .footer{
@@ -42,8 +43,8 @@ html{
 }
 .footer__link{
   text-decoration: none;
-  color: var(--rose-quartz);
+  color: var(--buff);
 }
 .footer__link:hover{
-  color: var(--sky-blue);
+  color: var(--misty-rose);
 }
