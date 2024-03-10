@@ -40,6 +40,7 @@ html{
 .form__check-input {
   width: 50px;
   height: 20px;
+  accent-color: var(--buff);
 }
 .form__submit{
     display: grid;
